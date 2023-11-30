@@ -1,0 +1,20 @@
+{% extends 'apoyo/base.html' %}
+
+{% block content %}
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<main class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4 mt-5">
+            <form action="" method="post" class="card card-body">
+                <h2 class="text-center">Donar</h2>
+                <p class="text-center">{{error}}</p>
+                {% csrf_token %}
+                {{form.as_p}}
+                <button  type="submit" class="btn btn-primary">Pagar</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+{% endblock %}
